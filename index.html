@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carambar - Les meilleures blagues !</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">CARAMBAR&CO</h1>
+            <p class="tagline">Les blagues qui font sourire depuis 1969 !</p>
+        </div>
+    </header>
+
+    <!-- Section principale -->
+    <main class="main">
+        <div class="container">
+            <!-- Carte de la blague -->
+            <div class="blague-card">
+                <div class="blague-header">
+                    <span class="blague-emoji">😂</span>
+                    <h2>Blague du moment</h2>
+                </div>
+                
+                <div class="blague-content">
+                    <p id="blague-texte">Clique sur le bouton pour découvrir une blague Carambar !</p>
+                </div>
+                
+                <div class="blague-footer">
+                    <button id="btn-blague" class="btn-carambar">
+                        🎲 Nouvelle Blague
+                    </button>
+                </div>
+            </div>
+
+            <!-- Loader (caché par défaut) -->
+            <div id="loader" class="loader hidden">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>🍬 Projet réalisé dans le cadre de la sélection CDA de la Wild Code School</p>
+            <p class="footer-links">
+                <a href="https://carambar-api-back.onrender.com/api-docs" target="_blank">📚 Documentation API</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
