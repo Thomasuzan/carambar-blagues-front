@@ -11,7 +11,7 @@ Landing page pour afficher les blagues Carambar de manière aléatoire.
 
 ## 🌐 Démo en ligne
 
-🔗 [Voir le site](https://github.com/Thomasuzan/carambar-blagues-front/)
+🔗 [Voir le site](https://thomasuzan.github.io/carambar-blagues-front/)
 
 ## 🔗 API Backend
 
