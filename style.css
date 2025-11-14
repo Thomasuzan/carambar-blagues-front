@@ -1,0 +1,289 @@
+/* ===========================
+   RESET & BASE
+   =========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: rgb(254, 219, 39);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #2D2D2D;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* ===========================
+   HEADER
+   =========================== */
+.header {
+    background-color: rgb(254, 219, 39);
+    padding: 30px 0;
+    text-align: center;
+}
+
+.logo {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #E3097E;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    color: #2D2D2D;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+/* ===========================
+   MAIN CONTENT
+   =========================== */
+.main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 40px 0;
+    position: relative; /* ← Ajoute cette ligne */
+}
+
+/* ===========================
+   CARTE BLAGUE
+   =========================== */
+.blague-card {
+    background: #FFFFFF;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.blague-header {
+    background: #E3097E;
+    padding: 25px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.blague-emoji {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 10px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.blague-header h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.blague-content {
+    padding: 40px 30px;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #FFFEF7 0%, #FFF9E6 100%);
+}
+
+#blague-texte {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #2D2D2D;
+    text-align: center;
+    font-weight: 500;
+}
+
+.blague-footer {
+    padding: 30px;
+    text-align: center;
+    background: #FFF9E6;
+}
+
+/* ===========================
+   BOUTON CARAMBAR
+   =========================== */
+.btn-carambar {
+    font-family: 'Fredoka', sans-serif;
+    background: linear-gradient(135deg, rgb(254, 219, 39) 0%, rgb(254, 219, 39) 100%);
+    color: #2D2D2D;
+    border: none;
+    padding: 18px 45px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(255, 212, 0, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-carambar:hover {
+    background: linear-gradient(135deg, rgb(254, 219, 39) 0%, rgb(254, 219, 39) 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 212, 0, 0.5);
+}
+
+.btn-carambar:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(255, 212, 0, 0.3);
+}
+
+.btn-carambar:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ===========================
+   LOADER
+   =========================== */
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+}
+
+.loader.hidden {
+    display: none;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
+    border: 5px solid rgba(227, 9, 126, 0.2);
+    border-top-color: #E3097E;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loader p {
+    color: #2D2D2D;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+.footer {
+    background-color: #E3097E;
+    color: #FFFFFF;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: rgb(254, 219, 39);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2rem;
+    }
+    
+    .logo span {
+        font-size: 1.7rem;
+    }
+    
+    .tagline {
+        font-size: 0.95rem;
+    }
+    
+    .blague-header h2 {
+        font-size: 1.4rem;
+    }
+    
+    #blague-texte {
+        font-size: 1.1rem;
+    }
+    
+    .btn-carambar {
+        font-size: 1.1rem;
+        padding: 15px 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.6rem;
+    }
+    
+    .blague-content {
+        padding: 30px 20px;
+        min-height: 150px;
+    }
+    
+    #blague-texte {
+        font-size: 1rem;
+    }
+}
